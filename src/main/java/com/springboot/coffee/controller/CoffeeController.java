@@ -52,7 +52,7 @@ public class CoffeeController {
     }
 
     @GetMapping("/{coffee-id}")
-    public ResponseEntity getCoffee(@PathVariable("coffee-id") long coffeeId) {
+    public ResponseEntity getCoffee(@PathVariable("coffee-id") @Positive long coffeeId) {
         Coffee coffee = coffeeService.findCoffee(coffeeId);
 
         return new ResponseEntity<>(
