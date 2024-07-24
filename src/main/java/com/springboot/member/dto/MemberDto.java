@@ -3,8 +3,7 @@ package com.springboot.member.dto;
 import com.springboot.member.entity.Member;
 import com.springboot.stamp.Stamp;
 import com.springboot.validator.NotSpace;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
+import lombok.*;
 
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
@@ -27,6 +26,7 @@ public class MemberDto {
     }
 
     @Getter
+    @AllArgsConstructor
     public static class Patch {
         private long memberId;
 
