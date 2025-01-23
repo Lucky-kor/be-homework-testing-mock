@@ -27,6 +27,7 @@ public class MemberDto {
     }
 
     @Getter
+    @AllArgsConstructor
     public static class Patch {
         private long memberId;
 
@@ -39,7 +40,6 @@ public class MemberDto {
         private String phone;
 
         private Member.MemberStatus memberStatus;
-
 
         public void setMemberId(long memberId) {
             this.memberId = memberId;

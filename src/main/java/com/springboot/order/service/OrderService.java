@@ -64,6 +64,7 @@ public class OrderService {
         if (step >= 2) {
             throw new BusinessLogicException(ExceptionCode.CANNOT_CHANGE_ORDER);
         }
+
         findOrder.setOrderStatus(Order.OrderStatus.ORDER_CANCEL);
         orderRepository.save(findOrder);
     }
