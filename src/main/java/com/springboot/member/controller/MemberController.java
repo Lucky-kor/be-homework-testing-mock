@@ -79,6 +79,7 @@ public class MemberController {
                                      @Positive @RequestParam int size) {
         Page<Member> pageMembers = memberService.findMembers(page - 1, size);
         List<Member> members = pageMembers.getContent();
+
         return new ResponseEntity<>(
                 new MultiResponseDto<>(mapper.membersToMemberResponses(members),
                         pageMembers),
