@@ -5,6 +5,7 @@ import com.springboot.stamp.Stamp;
 import com.springboot.validator.NotSpace;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
@@ -27,6 +28,7 @@ public class MemberDto {
     }
 
     @Getter
+    @AllArgsConstructor
     public static class Patch {
         private long memberId;
 
@@ -48,6 +50,7 @@ public class MemberDto {
 
     @AllArgsConstructor
     @Getter
+    @NoArgsConstructor
     public static class response {
         private long memberId;
         private String email;
