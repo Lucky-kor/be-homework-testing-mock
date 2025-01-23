@@ -68,7 +68,7 @@ public class OrderService {
         orderRepository.save(findOrder);
     }
 
-    private Order findVerifiedOrder(long orderId) {
+    public Order findVerifiedOrder(long orderId) {
         Optional<Order> optionalOrder = orderRepository.findById(orderId);
         Order findOrder =
                 optionalOrder.orElseThrow(() ->
