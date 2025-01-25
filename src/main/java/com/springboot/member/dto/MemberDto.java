@@ -26,6 +26,7 @@ public class MemberDto {
         private String phone;
     }
 
+    @AllArgsConstructor
     @Getter
     public static class Patch {
         private long memberId;
